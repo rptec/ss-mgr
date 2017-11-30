@@ -36,7 +36,7 @@ install_soft_for_each(){
 }
 install_nodejs(){
 	mkdir /usr/local/nodejs
- 	wget http://home.ustc.edu.cn/~mmmwhy/node-v6.9.1-linux-x64.tar.gz
+ 	wget https://nodejs.org/download/release/v6.9.1/node-v6.9.1-linux-x64.tar.gz
  	tar -xf node-v6.9.1-linux-x64.tar.gz -C /usr/local/nodejs/
  	rm -rf node-v6.9.1-linux-x64.tar.gz
  	ln -s /usr/local/nodejs/node-v6.9.1-linux-x64/bin/node /usr/local/bin/node
@@ -50,7 +50,7 @@ install_libsodium(){
 	./configure --prefix=/usr && make
 	make install
 	popd
-	wget http://home.ustc.edu.cn/~mmmwhy/mbedtls-2.4.0-gpl.tgz
+	wget https://tls.mbed.org/download/mbedtls-2.4.0-gpl.tgz
 	tar xvf mbedtls-2.4.0-gpl.tgz && rm -rf mbedtls-2.4.0-gpl.tgz
 	pushd mbedtls-2.4.0
 	make SHARED=1 CFLAGS=-fPIC

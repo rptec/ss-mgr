@@ -25,6 +25,7 @@ centos7 X64，在腾讯云，digitialocean,interserver,ethernetservers通过测�
 ## 安装ss-mgr
 本脚本包括主控端和节点端，安装时，自动添加本vps作为一个节点。
 ```
+yum install screen wget -y &&screen -S ss 
 wget -N --no-check-certificate https://raw.githubusercontent.com/rptec/ss-mgr/master/sm.sh && chmod +x sm.sh && bash sm.sh
 ```
 坐等就可以了，没有什么需要做的东西。

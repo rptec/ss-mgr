@@ -25,7 +25,7 @@ centos7 X64，在腾讯云，digitialocean,interserver,ethernetservers通过测�
 ## 安装ss-mgr
 本脚本包括主控端和节点端，安装时，自动添加本vps作为一个节点。
 ```
-wget -N --no-check-certificate https://raw.githubusercontent.com/mmmwhy/ss-mgr/master/sm.sh && chmod +x sm.sh && bash sm.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/rptec/ss-mgr/master/sm.sh && chmod +x sm.sh && bash sm.sh
 ```
 坐等就可以了，没有什么需要做的东西。
 打开ip地址，就可以看到ss-mgr了。
@@ -33,7 +33,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/mmmwhy/ss-mgr/m
 ## 增加节点
 本脚本为：已有**vps安装好主控端**，添加新节点时，在**新节点**使用的脚本。
 ```
-wget -N --no-check-certificate https://raw.githubusercontent.com/mmmwhy/ss-mgr/master/sm_node.sh && chmod +x sm_node.sh && bash sm_node.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/rptec/ss-mgr/master/sm_node.sh && chmod +x sm_node.sh && bash sm_node.sh
 ```
 
 - 输入密码

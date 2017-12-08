@@ -50,7 +50,7 @@ install_libsodium(){
 	./configure --prefix=/usr && make
 	make install
 	popd
-	wget http://home.ustc.edu.cn/~mmmwhy/mbedtls-2.4.0-gpl.tgz
+	wget https://tls.mbed.org/download/mbedtls-2.4.0-gpl.tgz
 	tar xvf mbedtls-2.4.0-gpl.tgz && rm -rf mbedtls-2.4.0-gpl.tgz
 	pushd mbedtls-2.4.0
 	make SHARED=1 CFLAGS=-fPIC
@@ -60,7 +60,7 @@ install_libsodium(){
 }
 install_ss_libev(){
 	cd /root 
-	wget -N -P  /root https://raw.githubusercontent.com/mmmwhy/ss-mgr/master/shadowsocks-libev-3.0.3.tar.gz
+	wget -N -P  /root https://raw.githubusercontent.com/rptec/ss-mgr/master/shadowsocks-libev-3.0.3.tar.gz
 	tar -xf shadowsocks-libev-3.0.3.tar.gz && rm -rf shadowsocks-libev-3.0.3.tar.gz && cd shadowsocks-libev-3.0.3
 	yum install epel-release -y
 	yum install gcc gettext autoconf libtool automake make pcre-devel asciidoc xmlto udns-devel libev-devel -y
@@ -84,7 +84,7 @@ install_ss_mgr(){
 	install_nodejs
 	install_libsodium
 	install_ss_for_each
-	git clone https://github.com/mmmwhy/shadowsocks-manager.git "/root/shadowsocks-manager"
+	git clone https://github.com/rptec/shadowsocks-manager.git "/root/shadowsocks-manager"
 	cd /root/shadowsocks-manager
 	npm i
 	ln -s /usr/local/nodejs/node-v6.9.1-linux-x64/bin/ssmgr /usr/local/bin/ssmgr
@@ -93,7 +93,7 @@ install_ss_mgr(){
 ss_mgr_s(){
 	install_ss_mgr
 	mkdir /root/.ssmgr
-	wget -N -P  /root/.ssmgr/ https://raw.githubusercontent.com/mmmwhy/ss-mgr/master/ss.yml
+	wget -N -P  /root/.ssmgr/ https://raw.githubusercontent.com/rptec/ss-mgr/master/ss.yml
 	sed -i "s#123456#${password}#g" /root/.ssmgr/ss.yml
 	cd /root/shadowsocks-manager/
 	screen -dmS ss node server.js -c /root/.ssmgr/ss.yml

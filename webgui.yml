@@ -31,20 +31,22 @@ plugins:
             year:
                 price: 120
                 flow: 200000000000
-    email:
+        
+ email:
         use: true
-        username: 'tunggt@hotmail.com'
-        password: '123123Aa!'
-        host: 'smtp-mail.outlook.com'
+        username: 'admin@tai.edu.gr'
+        password: '123123'
+        host: 'smtp.mailgun.org'
         port: 587
         
     webgui:
         use: true
         host: '0.0.0.0'
         port: '80'
-        site: 'http://127.0.0.1'
-        gcmSenderId: '456102641793'
-        gcmAPIKey: 'AAAAGzzdqrE:XXXXXXXXXXXXXX'
+        site: 'http://64.137.160.191'
+        gcmSenderId: '796486504860'
+        gcmAPIKey: 'AIzaSyA1xKXgmQuE-KhpsQELDNl21WQ5Fi5mvX8'
+        
     alipay:
         use: true
         appid: 

@@ -34,10 +34,10 @@ plugins:
         
  email:
         use: true
-        username: 'admin@tai.edu.gr'
-        password: '123123'
-        host: 'smtp.mailgun.org'
-        port: 587
+        username: 'i@ttt.tn'
+        password: '123123Aa'
+        host: 'smtp.yandex.ru'
+        port: 465
         
     webgui:
         use: true
